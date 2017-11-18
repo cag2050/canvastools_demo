@@ -1,5 +1,5 @@
 /*!
- * CanvasTools v1.0.0 
+ * CanvasTools v1.0.0
  * (github)https://github.com/S-mohan/canvasTools
  * (url) https://smohan.net/lab/canvastools
  * (c) smohan <https://smohan.net>
@@ -168,7 +168,7 @@ var StrokeWidth = [2, 4, 6];
 /**
  * 获取buttons模版
  * @param  {Array}  buttons [可用按钮]
- * @return {String} 
+ * @return {String}
  */
 var getButtons = function getButtons() {
 	var buttons = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
@@ -222,7 +222,7 @@ var getColorPanel = function getColorPanel() {
 /**
  * 获取画笔大小面板
  * @param  {Number} stroke [当前画笔大小]
- * @return {String}  
+ * @return {String}
  */
 var getStrokePanel = function getStrokePanel() {
 	var stroke = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
@@ -241,7 +241,7 @@ var getStrokePanel = function getStrokePanel() {
 /**
  * 获取字号选择器
  * @param  {Number} fontSize [默认字号]
- * @return {String} 
+ * @return {String}
  */
 var getFontPanel = function getFontPanel() {
 	var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -259,7 +259,7 @@ var getFontPanel = function getFontPanel() {
 /**
  * 获取模糊度模版
  * @param  {Number} ambiguite [默认模糊度 0 - 1]
- * @return {String}  
+ * @return {String}
  */
 var getAmbiguity = function getAmbiguity() {
 	var ambiguite = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : .5;
@@ -336,7 +336,7 @@ var $ = function $() {
  * 对象遍历
  * @param  {Object | Array}   object   [对象源]
  * @param  {Function} callback [回调]
- * @return  
+ * @return
  */
 var each = function each(object, callback) {
 	if ((typeof object === 'undefined' ? 'undefined' : _typeof(object)) === "object" && typeof callback === "function") {
@@ -363,7 +363,7 @@ var each = function each(object, callback) {
  * @param  {String}   eventType [事件类型]
  * @param  {String}   selector  [选择器]
  * @param  {Function} callback  [回调]
- * @return 
+ * @return
  */
 var bind = function bind(element, eventType, selector, callback) {
 	var sel = void 0,
@@ -401,7 +401,7 @@ var bind = function bind(element, eventType, selector, callback) {
  * @param  {HTMLElement}   element   [DOM元素]
  * @param  {String}   eventType [事件类型]
  * @param  {Function} callback  [回调]
- * @return 
+ * @return
  */
 var unbind = function unbind(element, eventType, callback) {
 	return element.removeEventListener(eventType, callback, false
@@ -409,7 +409,7 @@ var unbind = function unbind(element, eventType, callback) {
 	/**
   * 获取指定元素样式
   * @param  {HTMLElement} element
-  * @return {Object}  
+  * @return {Object}
   */
 	);
 };var getComputedStyles = function getComputedStyles(element) {
@@ -540,7 +540,7 @@ var AMBIGUITY_LEVEL = .7;
  * 创建画笔+颜色容器
  * @param  {Number} stroke [默认画笔]
  * @param  {String} color  [默认颜色]
- * @return {HTMLElement}   
+ * @return {HTMLElement}
  */
 var buildStrokePanel = function buildStrokePanel() {
 	var stroke = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : STROKE_DEFAULT_COLOR;
@@ -557,7 +557,7 @@ var buildStrokePanel = function buildStrokePanel() {
  * 创建字号+颜色容器
  * @param  {Number} fontSize [默认字号]
  * @param  {String} color  [默认颜色]
- * @return {HTMLElement}   
+ * @return {HTMLElement}
  */
 var buildFontPanel = function buildFontPanel() {
 	var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : TEXT_HELPER_FONT_SIZE;
@@ -574,7 +574,7 @@ var buildFontPanel = function buildFontPanel() {
  * 创建画笔 + 模糊度容器
  * @param  {Number} stroke    [默认画笔]
  * @param  {Number} ambiguity [默认模糊度]
- * @return {HTMLElement}  
+ * @return {HTMLElement}
  */
 var buildAmbiguityPanel = function buildAmbiguityPanel() {
 	var stroke = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : STROKE_DEFAULT_COLOR;
@@ -611,7 +611,7 @@ var getTextHelper = function getTextHelper() {
  * @param  {MouseEvent} event [鼠标事件]
  * @param  {Object} state [instance state]
  * @param  {Object} rect  [instance rect]
- * @return {HTMLElement}   
+ * @return {HTMLElement}
  */
 var insertTextHelper = function insertTextHelper(event, state, rect) {
 	var $textHelper = getTextHelper(),
@@ -673,7 +673,7 @@ var insertTextHelper = function insertTextHelper(event, state, rect) {
 
 /**
  * 移除辅助文本输入框
- * @return 
+ * @return
  */
 var removeTextHelper = function removeTextHelper() {
 	var $textHelper = document.getElementById(TEXT_HELPER_ID);
@@ -688,7 +688,7 @@ var removeTextHelper = function removeTextHelper() {
  * 获取鼠标在Canvas上的位置
  * @param  {Element Event} event [鼠标事件]
  * @param  {Object} rect  [Canvas rect]
- * @return {Object} 
+ * @return {Object}
  */
 var getPos = function getPos(event, rect) {
 	var x = event.pageX - rect.left;
@@ -737,12 +737,12 @@ var __downloadFile = function __downloadFile() {
 		});
 	}
 
-	//for ie 10+ 
+	//for ie 10+
 	else if (typeof navigator !== "undefined" && typeof canvas.msToBlob === 'function' && navigator.msSaveBlob) {
 			navigator.msSaveBlob(canvas.msToBlob(), fileName);
 		}
 
-		// other 
+		// other
 		else {
 				console.log('您的浏览器不支持该操作');
 			}
@@ -982,7 +982,7 @@ function __bindEvents() {
  * 绘制矩形
  * @param  {MouseEvent} event [鼠标事件]
  * @param  {Object} start [起始位置]
- * @return 
+ * @return
  */
 function __drawRect(event, start) {
 	var context = this.context,
@@ -1005,7 +1005,7 @@ function __drawRect(event, start) {
  * 绘制椭圆
  * @param  {MouseEvent} event [鼠标事件]
  * @param  {Object} start [起始位置]
- * @return 
+ * @return
  */
 function __drawEllipse(event, start) {
 	var context = this.context,
@@ -1032,7 +1032,7 @@ function __drawEllipse(event, start) {
  * 画笔工具自由绘制
  * @param  {MouseEvent} event [鼠标事件]
  * @param  {Object | null} start [起始位置]
- * @return 
+ * @return
  */
 function __drawBrush(event) {
 	var start = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
@@ -1052,7 +1052,7 @@ function __drawBrush(event) {
 /**
  * 绘制文字
  * @param  {MouseEvent} event [鼠标事件]
- * @return {[type]} 
+ * @return {[type]}
  */
 function __drawFont(event) {
 	var $textHelper = document.getElementById(TEXT_HELPER_ID);
@@ -1107,7 +1107,7 @@ function __drawFont(event) {
 /**
  * 绘制马赛克
  * @param  {MouseEvent} event [鼠标事件]
- * @return {[type]} 
+ * @return {[type]}
  */
 function __drawMoasic(event) {
 	var context = this.context,
@@ -1145,7 +1145,7 @@ function __drawMoasic(event) {
 
 /**
  * 切换鼠标指针
- * @return 
+ * @return
  */
 function __toggleCanvasCursor() {
 	var canvas = this.canvas;
@@ -1174,7 +1174,7 @@ function __toggleCanvasCursor() {
 
 /**
  * 保存到历史记录
- * @return  
+ * @return
  */
 function __pushHistory() {
 	this.history.push(this.context.getImageData(0, 0, this.rect.width, this.rect.height));
@@ -1264,7 +1264,7 @@ var CanvasTools = function () {
 
 		/**
    * destory
-   * @return 
+   * @return
    */
 
 	}, {
@@ -1304,6 +1304,7 @@ var CanvasTools = function () {
 
 exports.default = CanvasTools;
 module.exports = exports['default'];
+
 
 /***/ })
 /******/ ]);

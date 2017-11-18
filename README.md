@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+### 运行：npm run dev，可查看效果
+
 ## Build Setup
 
 ``` bash

@@ -1,7 +1,7 @@
 <template>
 <div>
-    <canvas id='canvas1'></canvas>
     <div id='tools'></div>
+    <canvas id='canvas1'></canvas>
 </div>
 </template>
 
